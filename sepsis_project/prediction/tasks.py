@@ -4,7 +4,7 @@ import app
 import metrics
 
 @task
-def start_single(c):
+def start_single_console(c):
     #starts a single worker for a single patient
     app.single_work() 
 
@@ -20,3 +20,7 @@ def run_metrics(c):
 @task 
 def start_frontend(c):
     c.run("python server.py")
+
+@task
+def start_input_csv(c, input_string):
+    app.single_work(input_csv = input_string)
