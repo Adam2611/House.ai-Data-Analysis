@@ -15,3 +15,8 @@
 15 take out entries with very few time entries
 16 took out weight column and ran some stats - 361 sepsis, 5514 non sepsis, 5875 total
 16a_sepsis_only just positive sepsis rows (56690)
+17 take out some Columns
+17a deleted outliers manually
+17a average time calc - calculating the average time step, might be useful
+pre_ml - taking out postadmit stuff
+pre_ml_2 - took out pt identifier, pos, neg
