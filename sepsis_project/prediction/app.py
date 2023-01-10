@@ -58,7 +58,8 @@ def single_work(input = None, frontend = None, input_csv = None):               
 
     if frontend and input:
         #incoming from the frontend 
-        frontend_single(main_dict, input)
+        to_frontend = frontend_single(main_dict, input)
+        return to_frontend
     
     elif input_csv:
         #incoming from a csv
@@ -117,7 +118,9 @@ def frontend_single(main_dict, input):
     result1 = rules.master_rules(fe, rows-1)
 
     if result1==True:
-        return "Sepsis was detected or is imminent in the patient."
+        print("Sepsis!")
+        frontend_result = "Sepsis was detected or is imminent in the patient."
+        return frontend_result
 
     else:
         return "No Sepsis Detected. Inputs are normal."

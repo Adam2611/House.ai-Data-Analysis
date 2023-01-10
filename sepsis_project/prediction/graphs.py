@@ -4,7 +4,7 @@ from matplotlib import pyplot
 dataset = read_csv("../FormattedData/pre_ml_2.csv", header=0, index_col=0)
 values = dataset.values
 # specify columns to plot
-groups = [4, 5, 6, 7, 8, 9,13,14]
+groups = [4, 5, 6, 7, 8]
 i = 1
 # plot each column
 pyplot.figure()

@@ -13,13 +13,18 @@ def index():
 def my_form_post():
     text = ""
     text = request.form['values']
-    if text == "":
-        result = "Please enter some values"
-        return render_template('index.ejs', result=result)
-    else:
-      result = prediction_app.single_work(input=text, frontend=True)
-      return render_template('index.ejs', result=result)
 
+    try:
+      if text == "":
+          result = "Please enter some values"
+          return render_template('index.ejs', result=result)
+      else:
+        result = prediction_app.single_work(input=text, frontend=True)
+        return render_template('index.ejs', result=result)
+    
+    except Exception:
+      return render_template('index.ejs', result="Please enter data with correct formatting.")
+ 
   
 
 if __name__ == '__main__':
