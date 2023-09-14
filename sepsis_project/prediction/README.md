@@ -26,3 +26,7 @@ OUTPUT in future - Based on threshold, send to critical care team
 For real time:
 need to monitor many patients simulatenously; many streams of data coming in at intervals; need multiprocessing to handle this
 - if rule or prediction happens - take off the worker
+
+
+
+![image](https://github.com/Adam2611/House.ai-Data-Analysis/assets/57512498/b69c896c-66ea-4a8c-b198-8248653d3d24)
